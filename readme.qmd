@@ -1,0 +1,15 @@
+---
+title: "Untitled"
+format: gfm
+---
+
+## Introduction
+
+This is writing about what I am doing and why I am doing it.
+
+```{python}
+#| eval: false
+2 + 2
+```
+
+## Stuff
