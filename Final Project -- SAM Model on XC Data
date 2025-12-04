@@ -1,0 +1,91 @@
+---
+title: "Final Project -- SAM Model on XC Data"
+format: html
+---
+
+```{python}
+import requests
+from bs4 import BeautifulSoup
+import re
+import pandas as pd
+```
+
+
+```{python}
+roster_url = "https://athletics.hope.edu/sports/womens-cross-country/roster/2024"
+
+page = requests.get(roster_url)
+soup = BeautifulSoup(page.content, "html.parser")
+```
+
+
+```{python}
+athlete_urls = []
+homepage = "https://athletics.hope.edu"
+
+for athlete in soup.select (".sidearm-roster-player-name a"): 
+    athlete_urls.append(homepage + athlete["href"])
+
+data = []
+
+for link in athlete_urls: 
+    page = requests.get(link)
+    athlete_soup = BeautifulSoup(page.content, "html.parser")
+    athlete_name = athlete_soup.select_one(".sidearm-roster-player-name")
+    name = athlete_name.text.strip() 
+    image_links = athlete_soup.select(".sidearm-roster-player-image-historical.relative.lazy") 
+
+    urls = []
+    for img in image_links: 
+        style = img["style"]
+        if "url(" in style:
+            url_part = style.split("url(")[1].split(")")[0]
+            cleaned = url_part.strip("'\"")
+            urls.append(cleaned)
+
+    test_links = [re.sub("/", "%2f", x) for x in urls]
+
+    complete_links = []
+    for x in test_links:
+        photo_link = ( 
+            "https://images.sidearmdev.com/convert?"
+            "url=https%3a%2f%2fdxbhsrqyrr690.cloudfront.net"
+            "%2fsidearm.nextgen.sites%2fathletics.hope.edu"
+            f"{x}&type=png")
+        complete_links.append(photo_link)
+
+    for photo in complete_links:
+        data.append({
+            "Name": name,
+            "Url": photo
+        })
+
+
+df = pd.DataFrame(data)
+df
+```
+
+
+```{python}
+import os
+import requests
+
+desktop = os.path.join(os.path.expanduser("~"), "Desktop", "HopeXC_Photos")
+os.makedirs(desktop)
+```
+
+
+```{python}
+for info, row in df.iterrows():
+    name = row["Name"].replace(" ", "_")
+    url = row["Url"]
+
+    athlete_folder = os.path.join(desktop, name)
+    os.makedirs(athlete_folder, exist_ok=True)
+
+    filename = os.path.join(athlete_folder, f"photo_{info}.png")
+
+    img_data = requests.get(url).content
+    with open(filename, "wb") as f: 
+        f.write(img_data)
+```
