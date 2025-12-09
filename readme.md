@@ -135,12 +135,13 @@ for info, row in df.iterrows():
 
 ## Sample of Generated Images
 
-![](https://drive.google.com/uc?id=1lalRa4U8R4n3fw-owP2zBRE7Qseo6z8D.png)
-![](https://drive.google.com/uc?id=1w2Vo381L17vWsNLNEgOq3SY7sncRyM6d.png)
-![](https://drive.google.com/uc?id=1UXwMhTASuWnqHgfE2GzAl2rP6QgQyY_X.png)
-![](https://drive.google.com/uc?id=1wJBZP8uqEVxn9Ijg_vnnoVVVKSXGfyHN.png)
-![](https://drive.google.com/uc?id=1Lok43LS4knuJYHlTLXY2J0AH7XRTZSpt.png)
-![](https://drive.google.com/uc?id=1swkP8dd8acJGXY9adI9rcYTt3Q9ExYsT.png)
+![](Age%20Transformation%20Project/alyson.jpg)
+![](Age%20Transformation%20Project/amanda(1).jpg)
+![](Age%20Transformation%20Project/ariana(1).jpg)
+![](Age%20Transformation%20Project/lucy(1).jpg)
+![](Age%20Transformation%20Project/madeline(1).jpg)
+![](Age%20Transformation%20Project/nidia(1).jpg)
+![](Age%20Transformation%20Project/paige.jpg)
 
 ## Value in Further Exploration of Vision
 
