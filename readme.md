@@ -133,15 +133,10 @@ for info, row in df.iterrows():
         f.write(img_data)
 ```
 
-## Sample of Generated Images
+## Link to Generated Photos
 
-![](Age%20Transformation%20Project/alyson.jpg)
-![](Age%20Transformation%20Project/amanda(1).jpg)
-![](Age%20Transformation%20Project/ariana(1).jpg)
-![](Age%20Transformation%20Project/lucy(1).jpg)
-![](Age%20Transformation%20Project/madeline(1).jpg)
-![](Age%20Transformation%20Project/nidia(1).jpg)
-![](Age%20Transformation%20Project/paige.jpg)
+Folders to roster photos (inputs and output folders included):
+https://drive.google.com/drive/folders/1JptliP1eg5F5IgYY1YhioV9CzsR5IFKl?usp=sharing
 
 ## Value in Further Exploration of Vision
 

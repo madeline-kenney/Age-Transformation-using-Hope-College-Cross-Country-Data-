@@ -110,14 +110,9 @@ for info, row in df.iterrows():
         f.write(img_data)
 ```
 
-## Sample of Generated Images 
-![](Age Transformation Project/alyson.jpg)
-![](Age Transformation Project/amanda(1).jpg)
-![](Age Transformation Project/ariana(1).jpg)
-![](Age Transformation Project/lucy(1).jpg)
-![](Age Transformation Project/madeline(1).jpg)
-![](Age Transformation Project/nidia(1).jpg)
-![](Age Transformation Project/paige.jpg) 
+## Link to Generated Photos 
+Folders to roster photos (inputs and output folders included): 
+https://drive.google.com/drive/folders/1JptliP1eg5F5IgYY1YhioV9CzsR5IFKl?usp=sharing 
 
 ## Value in Further Exploration of Vision
 Currently, there's a significant focus on LLMs compared to imaging. For example, of the top-100 most cited AI papers, 83% focused on LLMs and only 17% were related to vision. Additionally, LLMs are driven by large investment and research with the enterprise LLM global market size reaching $6.7 billion in 2024 and $8.8 billion in 2025. With many focused on LLMs, there seems to be untapped potential and attention toward vision capabilities. Some incentives that I believe may drive the imaging space include: (1) society's anti-aging culture with the 2025 global market size in this area reaching $85.12 billion; (2) entertainment and media given for example the high costs associated with CGI and the potential new marketing tactics that could be unlocked with imaging transformation capabilities; and (3) humanity's innate nature and tendency to look into the future as well as connect with the past, which has already been seen within the audio space for example, where apps such as 2wai allow users to 'talk' to deceased loved ones. 
