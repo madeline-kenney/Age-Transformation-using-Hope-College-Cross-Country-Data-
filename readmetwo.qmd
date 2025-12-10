@@ -1,0 +1,24 @@
+---
+title: "readmetwo"
+format: html
+---
+## Sample of Generated Photos 
+```{python}
+import os
+from PIL import Image
+import matplotlib.pyplot as plt
+
+folder_path = "/Users/madelinekenney/Documents/Unstructured Data Final Project"
+
+for file in os.listdir(folder_path):
+    if file.lower().endswith(".png"):
+        img_path = os.path.join(folder_path, file)
+        img = Image.open(img_path)
+
+        plt.figure(figsize=(6, 6))
+        plt.imshow(img)
+        plt.axis("off")
+        plt.title(file)
+        plt.show()
+
+```
